@@ -1,0 +1,149 @@
+.fedback-page {
+  width: 100vw;
+  height: 755px;
+  margin: 0;
+  padding: 0;
+  background-image: url(../assets/images/5-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  @include flex(column-reverse, center, center);
+
+  @include mobile-w {
+    height: 1000px;
+  }
+
+  @include mobile {
+    height: 900px;
+  }
+
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 101%;
+    top: 0;
+    background-color: rgba($color: $DarkGray, $alpha: 0.9);
+  }
+}
+
+.main-container--fedbacks-page {
+  @include flex(column, center, center);
+}
+
+.fedback-page__title {
+  font-family: $fontAleo;
+  font-size: 36px;
+  font-weight: normal;
+  text-align: left;
+  color: $colorWhite;
+
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.fedback-page__card {
+  width: 100%;
+  height: 285px;
+  margin-top: 95px;
+  @include flex(row, center, center);
+  background-color: $DarkGray;
+
+  @include tablet {
+    height: 360px;
+  }
+
+  @include mobile-w {
+    height: 750px;
+    @include flex(column, center, center);
+    padding: 20px;
+  }
+
+  @include mobile {
+    height: 650px;
+    @include flex(column, center, center);
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  &__img {
+    width: 40%;
+
+    @include mobile-w {
+      width: 100%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    width: 60%;
+    height: inherit;
+    padding-left: 60px;
+    padding-right: 55px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+
+    @include flex(column, flex-start, space-between);
+
+    @include tablet {
+      @include flex(column, flex-start, center);
+    }
+
+    @include mobile-w {
+      width: 100%;
+      height: 60%;
+      @include flex(column, center, center);
+    }
+
+    @include mobile {
+      width: 100%;
+      height: 60%;
+      @include flex(column, center, center);
+      padding: 10px;
+    }
+  }
+
+  &__title {
+    font-family: $fontJosefin;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+    color: $colorWhite;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    font-family: $fontJosefin;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.63;
+    text-align: left;
+    color: $colorGrayText;
+
+    @include tablet {
+      margin-top: 35px;
+      text-align: justify;
+    }
+
+    @include mobile-w {
+      margin-top: 35px;
+      text-align: justify;
+    }
+
+    @include mobile {
+      margin-top: 35px;
+      text-align: justify;
+    }
+
+    &__icon {
+      font-size: 20px;
+      color: $colorBlue;
+      padding-right: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.location-page--first {
+  width: 100vw;
+  height: 700px;
+  background-image: url(../assets/images/3-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.location-page--second {
+  width: 100vw;
+  height: 700px;
+  background-image: url(../assets/images/4-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main-container--location-page--first,
+.main-container--location-page--second {
+  height: 100%;
+  @include flex(column, flex-start, flex-end);
+
+  @include tablet {
+    @include flex(column, center, center);
+  }
+
+  @include mobile-w {
+    @include flex(column, center, center);
+  }
+
+  @include mobile {
+    @include flex(column, center, center);
+  }
+}
+
+.main-container--location-page--second {
+  @include flex(column, flex-end, flex-end);
+}
+
+.location-card {
+  width: 49%;
+  height: 370px;
+  padding: 30px;
+  @include flex(column, flex-start, space-between);
+  background-color: $cartBlack;
+  margin: 100px 0;
+
+  @include tablet {
+    width: 100%;
+    @include flex(column, center, space-between);
+  }
+
+  @include mobile-w {
+    width: 100%;
+    @include flex(column, center, space-between);
+    height: 60%;
+    margin: 30px 0;
+  }
+
+  @include mobile {
+    width: 100%;
+    @include flex(column, center, space-between);
+    height: 70%;
+    margin: 30px 0;
+  }
+
+  &__title {
+    font-family: $fontJosefin;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-align: left;
+    color: $colorGrayText;
+    margin-top: 20px;
+  }
+
+  &__subtitle {
+    font-family: $fontJosefin;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+    color: $colorWhite;
+    text-transform: uppercase;
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__desc {
+    font-family: $fontJosefin;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.63;
+    text-align: left;
+    color: $colorGrayText;
+
+    @include tablet {
+      text-align: center;
+    }
+
+    @include mobile-w {
+      text-align: center;
+    }
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__button {
+    padding: 13px 64px;
+  }
+}

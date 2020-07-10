@@ -1,0 +1,276 @@
+.about-page {
+  width: 100vw;
+  height: 1022px;
+  background-image: url(../assets/images/2-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  @include flex(column-reverse, center, space-between);
+
+  @include tablet {
+    height: 900px;
+  }
+
+  @include mobile-w {
+    height: 700px;
+  }
+
+  @include mobile {
+    height: 900px;
+  }
+
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 67%;
+    top: 0;
+    background-color: rgba($color: $DarkGray, $alpha: 0.9);
+
+    @include tablet {
+      height: 75%;
+    }
+
+    @include mobile-w {
+      height: 75%;
+    }
+
+    @include mobile {
+      height: 60%;
+    }
+  }
+}
+
+.main-container--about {
+  height: 100%;
+  @include flex(row, center, space-between);
+
+  @include mobile-w {
+    @include flex(column, center, space-between);
+  }
+}
+
+.about-content {
+  width: 48%;
+  height: 440px;
+  @include flex(column, flex-start, space-between);
+  z-index: 3;
+
+  @include tablet {
+    height: 550px;
+  }
+
+  @include mobile-w {
+    @include flex(column, center, space-between);
+    height: 450px;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  @include mobile {
+    width: 100%;
+    @include flex(column, center, space-between);
+  }
+
+  &__title {
+    margin-top: 80px;
+    font-family: $fontAleo;
+    font-size: 36px;
+    font-weight: normal;
+    text-align: left;
+    color: $colorWhite;
+
+    @include mobile-w {
+      margin-top: 20px;
+    }
+
+    @include mobile {
+      margin-top: 10px;
+    }
+  }
+
+  &__desc {
+    font-family: $fontJosefin;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.63;
+    letter-spacing: 1.6px;
+    text-align: left;
+    color: $colorGrayText;
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__button {
+    padding: 20px 40px;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 1.2px;
+
+    @include tablet {
+      width: 210%;
+    }
+
+    @include mobile-w {
+      width: 100%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+.about-pictures {
+  width: 43%;
+  height: 440px;
+  @include flex(column, flex-start, center);
+  z-index: 2;
+
+  @include tablet {
+    height: 550px;
+  }
+
+  @include mobile-w {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  &__top-img {
+    width: 74%;
+    padding-bottom: 5px;
+  }
+
+  &__bottom-img {
+    width: 74%;
+    align-self: flex-end;
+  }
+}
+
+.check-list {
+  width: 100vw;
+  height: 33%;
+  background-color: $DarkGray;
+
+  @include tablet {
+    height: 25%;
+  }
+
+  @include mobile-w {
+    height: 25%;
+  }
+
+  @include mobile {
+    height: 40%;
+  }
+}
+
+.main-container--check-list {
+  height: 100%;
+  position: relative;
+  @include flex(row, center, space-between);
+
+  @include mobile {
+    @include flex(column, center, space-between);
+    padding: 20px 0;
+  }
+}
+
+.check-list__point {
+  width: 25%;
+  height: 120px;
+  @include flex(column, center, space-between);
+
+  @include mobile {
+    padding: 10px 0;
+    width: 80%;
+    height: 100px;
+    @include flex(column, center, space-between);
+  }
+
+  &__title {
+    font-family: $fontAleo;
+    font-size: 36px;
+    font-weight: normal;
+    text-align: center;
+    color: $colorGrayText;
+
+    @include tablet {
+      font-size: 25px;
+    }
+
+    @include mobile-w {
+      font-size: 23px;
+    }
+
+    @include mobile {
+      font-size: 22px;
+    }
+  }
+
+  &__icon {
+    font-size: 59px;
+
+    @include mobile-w {
+      font-size: 50px;
+    }
+
+    @include mobile {
+      font-size: 45px;
+    }
+  }
+}
+
+.decorations {
+  margin-top: 30px;
+  width: 80%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  @include flex(row, flex-end, space-around);
+
+  @include mobile-w {
+    margin-top: 10px;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  &__container {
+    width: 285px;
+    height: 95px;
+    display: flex;
+    position: relative;
+    padding: 5px;
+    overflow: hidden;
+
+    &__arc {
+      width: 380px;
+      height: 380px;
+      border-radius: 100% 100% 0 0;
+      opacity: 0.5;
+      border-top: 2px dotted gray;
+      position: absolute;
+      clip-path: inset(0 45px 285px 45px);
+      left: 50%;
+      transform: translate(-50%);
+
+      @include tablet {
+        width: 310px;
+        height: 310px;
+      }
+
+      @include mobile-w {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}

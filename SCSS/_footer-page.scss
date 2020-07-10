@@ -1,0 +1,50 @@
+.footer-page {
+  width: 100vw;
+  height: 210px;
+  background-color: $DarkGray;
+
+  @include mobile {
+    height: 200px;
+  }
+
+  @include mobile-w {
+    height: 200px;
+  }
+}
+
+.main-container--footer-page {
+  @include flex(column, center, flex-end);
+}
+
+.footer-page__subtitle {
+  font-family: $fontJosefin;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 1.6px;
+  text-align: center;
+  color: $colorWhite;
+  margin-top: 15px;
+}
+
+.footer-page__social {
+  margin-top: 30px;
+  margin-bottom: 45px;
+  cursor: pointer;
+
+  @include mobile {
+    margin-bottom: 30px;
+  }
+
+  @include mobile-w {
+    margin-bottom: 30px;
+  }
+
+  &__icon {
+    padding: 5px 10px;
+    font-size: 16px;
+
+    &:hover {
+      color: $colorBlue;
+    }
+  }
+}
